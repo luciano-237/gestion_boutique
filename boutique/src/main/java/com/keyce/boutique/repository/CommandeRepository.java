@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.keyce.boutique.model.Commande;
 
 @Repository
-public interface CommandeDepot extends JpaRepository<Commande, Long> {
+public interface CommandeRepository extends JpaRepository<Commande, Long> {
 }

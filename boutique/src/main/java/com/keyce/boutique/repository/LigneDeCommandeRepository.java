@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.keyce.boutique.model.LigneDeCommande;
 
 @Repository
-public interface LigneDeCommandeDepot extends JpaRepository<LigneDeCommande, Long> {
+public interface LigneDeCommandeRepository extends JpaRepository<LigneDeCommande, Long> {
 }

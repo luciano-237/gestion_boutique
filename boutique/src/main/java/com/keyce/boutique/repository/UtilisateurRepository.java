@@ -8,6 +8,6 @@ import com.keyce.boutique.model.Utilisateur;
 import java.util.Optional;
 
 @Repository
-public interface UtilisateurDepot extends JpaRepository<Utilisateur, Long> {
+public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> {
     Optional<Utilisateur> findByEmail(String email);
 }

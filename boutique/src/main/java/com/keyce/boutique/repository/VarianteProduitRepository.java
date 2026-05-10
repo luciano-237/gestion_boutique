@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.keyce.boutique.model.VarianteProduit;
 
 @Repository
-public interface VarianteProduitDepot extends JpaRepository<VarianteProduit, Long> {
+public interface VarianteProduitRepository extends JpaRepository<VarianteProduit, Long> {
 }

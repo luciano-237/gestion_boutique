@@ -8,6 +8,6 @@ import com.keyce.boutique.model.Produit;
 import java.util.List;
 
 @Repository
-public interface ProduitDepot extends JpaRepository<Produit, Long> {
+public interface ProduitRepository extends JpaRepository<Produit, Long> {
     List<Produit> findByNomContainingIgnoreCase(String texte);
 }

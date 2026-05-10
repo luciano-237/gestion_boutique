@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.keyce.boutique.model.Administrateur;
 
 @Repository
-public interface AdministrateurDepot extends JpaRepository<Administrateur, Long> {
+public interface AdministrateurRepository extends JpaRepository<Administrateur, Long> {
 }
