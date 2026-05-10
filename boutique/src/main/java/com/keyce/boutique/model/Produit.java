@@ -1,7 +1,15 @@
 package com.keyce.boutique.model;
 
-import jakarta.persistence.*;
 import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Produit {
@@ -11,6 +19,7 @@ public class Produit {
 
     private String nom;
     private String description;
+    private String photo; // Ajout du champ photo
 
     @ManyToOne
     @JoinColumn(name = "categorie_id")
@@ -45,6 +54,14 @@ public class Produit {
         this.description = description;
     }
 
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
     public Categorie getCategorie() {
         return categorie;
     }
@@ -60,6 +77,4 @@ public class Produit {
     public void setVariantes(List<VarianteProduit> variantes) {
         this.variantes = variantes;
     } 
-
-    
 }

@@ -1,6 +1,13 @@
 package com.keyce.boutique.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "utilisateurs")
@@ -18,6 +25,8 @@ public abstract class Utilisateur {
 
     @Column(nullable = false)
     private String motDePasse;
+
+    private String photo; // Ajout du champ photo
 
     // Constructeurs
     public Utilisateur() {}
@@ -40,4 +49,7 @@ public abstract class Utilisateur {
 
     public String getMotDePasse() { return motDePasse; }
     public void setMotDePasse(String motDePasse) { this.motDePasse = motDePasse; }
+
+    public String getPhoto() { return photo; }
+    public void setPhoto(String photo) { this.photo = photo; }
 }
