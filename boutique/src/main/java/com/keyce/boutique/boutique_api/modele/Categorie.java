@@ -1,27 +1,28 @@
-package com.boutique.boutique_api.model;
+package com.keyce.tp2.modele;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "categories")
 public class Categorie {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nom;
-
     private String description;
 
-    // CONSTRUCTEUR VIDE
-    public Categorie() {
-    }
+    @OneToMany(mappedBy = "categorie")
+    private List<Produit> produits;
 
-    // GETTERS ET SETTERS
+    public Categorie() {}
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNom() {
@@ -39,4 +40,14 @@ public class Categorie {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public List<Produit> getProduits() {
+        return produits;
+    }
+
+    public void setProduits(List<Produit> produits) {
+        this.produits = produits;
+    }
+
+    
 }
